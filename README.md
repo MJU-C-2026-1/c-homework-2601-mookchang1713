@@ -114,7 +114,7 @@
      
 ### **📁 증빙 자료:**
   * [3차_AI협업캡처.pdf 첨부 완료] (https://github.com/user-attachments/files/28109655/C._.-.Google.Gemini.pdf)
-  * [3차과제_실행결과.jpg] https://github.com/mookchang1713/-C-/issues/4#issue-4495816727
+  * [3차과제_실행결과.jpg] <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/acce8c54-a20d-4510-9099-15f2943b1e33" />
 <br>
 
 ### 🟥 [4차 과제: V4.0] 모듈화 및 데이터 확장 (배열과 함수) - 🌟최종 완성 -- 향후 작성 예정
