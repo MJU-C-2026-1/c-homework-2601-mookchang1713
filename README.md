@@ -113,8 +113,8 @@
      * **해결:** 1번 입력을 꼭 해야지만 체크용 변수가 1이 되게 만들고, 만약 입력 안 하고 2,3번을 누르면 유저의 잘못된 접근을 차단합니다. 또한 잘못된 입력 발생 시 입력되는 공간을 강제로 비워주는 코드를 내장시켜 예외처리를 완벽하게 해결했습니다.
      
 ### **📁 증빙 자료:**
-  * [3차_AI협업캡처.pdf 첨부 완료] (https://github.com/user-attachments/files/28109655/C._.-.Google.Gemini.pdf)
-  * [3차과제_실행결과.jpg] <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/acce8c54-a20d-4510-9099-15f2943b1e33" />
+  * [3차_AI협업캡처.pdf 첨부 완료] https://github.com/user-attachments/files/28315843/-.Google.Gemini.pdf
+  * [3차과제_실행결과.jpg] <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/229bd62a-d486-4fd8-bcb7-17487537b64f" />
 <br>
 
 ### 🟥 [4차 과제: V4.0] 모듈화 및 데이터 확장 (배열과 함수) - 🌟최종 완성 -- 향후 작성 예정
