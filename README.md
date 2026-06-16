@@ -141,6 +141,6 @@
       * **해결:** 배열 기반 로직에 맞춰 호출 형식을 calculateTotal(lifts, 3);으로 변경함. 배열의 시작 주소(포인터)와 순회할 크기를 정확히 매칭시켜 안전한 주소 연산이 이루어지도록 수정함.
      
 ### **📁 증빙 자료:**
-  * [4차_AI협업캡처.pdf 첨부 완료] https://github.com/mookchang1713/-C-/issues/7#issue-4670871413
+  * [4차_AI협업캡처.pdf 첨부 완료] [과제 pdf.pdf](https://github.com/user-attachments/files/28984151/pdf.pdf)
   * [4차과제_실행결과.jpg] <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/5a75408e-b142-4753-8d9a-8262aeb75c7c" />
 <br>
