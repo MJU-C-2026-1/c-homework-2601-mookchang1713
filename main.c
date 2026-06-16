@@ -9,32 +9,44 @@
 // 전역 변수 선언
 char initial = ' ';
 double bodyWeight = 0.0;
-int squat = 0, bench = 0, dead = 0;
+int lifts[5] = {0, 0, 0, 0, 0};
 int total = 0;
 double ratio = 0.0;
 int hasData = 0; //데이터 입력 여부를 확인하는 플래그 변수
 
 //사용자 정의 함수 1: 데이터 입력 함수
-void inputData()
+void inputData(int arr[])
 {
   printf("\n--- [1. 입력] 사용자 정보 및 중량 등록 ---\n");
-  printf("본인 서함의 영문 이니셜 첫 글자를 입력하세요: ");
+  printf("본인 성함의 영문 이니셜 첫 글자를 입력하세요: ");
   scanf(" %c", &initial);
 
   printf("현재 몸무게(kg)을 입력하세요: ");
   scanf("%lf", &bodyWeight);
 
-  printf("스쿼트, 벤치프레스, 데드리프트 중량을 공백으로 구분하여 입력: ");
-  scanf("%d %d %d", &squat, &bench, &dead);
+  //인덱스(arr[i])를 활용한 배열 순회를 통해 데이터 입력 연산 수행
+  char *liftNames[3] = {"스쿼트", "벤치프레스", "데드리프트"};
+  printf("3대 운동 중량을 차례대로 입력하세요.\n");
+  for(int i=0; i<3; i++)
+  {
+    printf("%s 중량(kg)", liftNames[i]);
+    scanf("%d", &arr[i]);
+  }
 
   hasData = 1;
   printf("--> 데이터 입력이 완료되었습니다\n");
 }
 
 //사용자 정의 함수 2: 3대 중량 총합 계산 함수
-int calculateTotal(int s, int b, int d)
+int calculateTotal(int *arr, int size)
 {
-  return s + b + d;
+  int sum = 0;
+  //인덱스(arr[i])를 이용한 배열 순회(조회 및 연산)
+  for(int i = 0; i < size; i++)
+  {
+    sum += arr[i];
+  }
+  return sum;
 }
 
 //사용자 정의 함수 3: 체중 대비 비율 계산 함수
@@ -44,7 +56,31 @@ double calculateRatio(int t, double bw)
   {
     return (double)t / bw;
   }
-  return -.0;  
+  return 0.0;  
+}
+
+//포인터 연산을 이용해 배열 데이터를 출력하는 전용 함수
+//포인터 간접참조(*ptr), 증감연산(ptr++), *(ptr+i)
+void printLiftsInfo(int *ptr, int size)
+{
+  char *liftNames[3] = {"스쿼트", "벤치프레스", "데드리프트"};
+  //1. 포인터 연산 *(ptr + i)을 이용한 배열 순회 및 조회
+  printf("- 개별 기록 : ");
+  for(int i=0; i<size; i++)
+  {
+    printf("%s %dkg", liftNames[i], *(ptr + i));
+  }
+  printf("\n");
+
+  //2. 포인터 증감 연산(p++) 및 간접참조(*p)를 이용한 배열 순회
+  int *p = ptr;
+  printf("- 내부 데이터 확인(포인터 증감연산): ");
+  for(int i=0; i<size; i++)
+  {
+    printf("%d", *p);
+    p++;
+  }
+  printf("\n");
 }
 
 //사용자 정의 함수 4: 기록 분석 결과 출력 함수
@@ -53,6 +89,9 @@ void printView()
   printf("\n===============================\n");
   printf("사용자 [%c] 님의 근력 분석 결과\n", initial);
   printf("===============================\n");
+
+  printLiftsInfo(lifts, 3);
+
   printf("3대 중량 총합: \t%d kg\n", total);
   printf("체중 대비 비율:\t%.2f 배\n", ratio);
   printf("===============================\n");
@@ -135,8 +174,8 @@ int main()
     //메인 로직은 호출 위주로 간결하게 구정(목차)
     if(menuChoice == 1)
     {
-      inputData();
-      total = calculateTotal(squat, bench, dead);
+      inputData(lifts);
+      total = calculateTotal(lifts, 3);
       ratio = calculateRatio(total, bodyWeight);
     }
     else if(menuChoice == 2)
