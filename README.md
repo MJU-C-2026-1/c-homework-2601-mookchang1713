@@ -141,5 +141,5 @@
      
 ### **📁 증빙 자료:**
   * [4차_AI협업캡처.pdf 첨부 완료] https://github.com/mookchang1713/-C-/issues/7#issue-4670871413
-  * [4차과제_실행결과.jpg] https://github.com/mookchang1713/-C-/issues/8#issue-4670873771
+  * [4차과제_실행결과.jpg] <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/5a75408e-b142-4753-8d9a-8262aeb75c7c" />
 <br>
